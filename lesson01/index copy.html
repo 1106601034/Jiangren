@@ -1,122 +1,63 @@
+<!-- semantic a11y seo -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssignmentOne</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container">
-        <h2>Homemade Cookies Delivered to Your Door</h2>
-        <p>We delivery boxes of freshly baked cookies to your door. Please fill in the form below to place your order.
-        </p>
-        <h2>ORDER FORM</h2>
-        <h3>Contact Details</h3>
-        <form>
-            <div class="mb-3 row">
-                <label class="col-form-label col-sm-2" for="your_name">Your name:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="your_name" placeholder="Firstname Surname"
-                        name="your_name">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label class="col-form-label col-sm-2" for="phone_number" step="1">Phone number:</label>
-                <div class="col-sm-10">
-                    <input type="tel" class="form-control" id="phone_number" placeholder="Number including area code"
-                        name="phone_number" pattern="[0-9]{9}">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label class="col-form-label col-sm-2" for="Email">Email:</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="Email" placeholder="Enter email" name="Email">
-                </div>
-            </div>
-            <h3>Contact Details</h3>
-            <div class="mb-3 row">
-                <div class="col-form-label col-sm-2">Select a cookie type:</div>
-                <div class="col-sm-5 btn-group">
-                    <input type="radio" class="btn-check" name="cookie_type" id="cookie_type1" value="Chocolate" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="cookie_type1">Chocolate</label>
+    <header>
+        <h1>Sign Up</h1>
+    </header>
+    <main>
+        <section id="contact" class="contact" aria-label="Contact heading">
+            <form class="contact-form" aria-label="Contact form">
+                <h2>Your basic info</h2>
 
-                    <input type="radio" class="btn-check" name="cookie_type" id="cookie_type2" value="Shortbread" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="cookie_type2">Shortbread</label>
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" id="fname" />
+                <label for="name">Last Name</label>
+                <input type="text" name="name" id="lname" />
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" />
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password" />
 
-                    <input type="radio" class="btn-check" name="cookie_type" id="cookie_type3" value="Macaron" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="cookie_type3">Macaron</label>
+                <h3>Other details</h3>
 
-                    <input type="radio" class="btn-check" name="cookie_type" id="cookie_type4" value="Gingerbrad" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="cookie_type4">Gingerbrad</label>
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label class="col-form-label col-sm-2" for="quantity">Number of boxes:</label>
-                <div class="col-sm-10">
-                    <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="0" step="1">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <legend class="col-form-label col-sm-2">Optional extras:</legend>
-                <div class="col-form-label col-sm-10">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="extras1" name="extras1" value="ex_choc">
-                        <label class="form-check-label" for="extras1">Extra Choc-chips</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="extras2" name="extras2" value="Icing_sugar">
-                        <label class="form-check-label" for="extras2">Icing sugar</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="extras3" name="extras3" value="Almond_flakes">
-                        <label class="form-check-label" for="extras3">Almond flakes</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="extras4" name="extras4" value="Caramel">
-                        <label class="form-check-label" for="extras4">Caramel</label>
-                    </div>
-                </div>
-            </div>
-            <h3>Delivery Details</h3>
-            <div class="mb-3 row">
-                <label class="col-form-label col-sm-2" for="Address">Delivery Address:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Address" placeholder="Enter address here"
-                        name="Address">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label class="col-form-label col-sm-2" for="Date">Delivery Date:</label>
-                <div class="col-sm-10">
-                    <input type="date" class="form-control" id="Date" name="Date">
-                </div>
-            </div>
+                <label for="birtgdate">Birth Date</label>
+                <input type="text" name="birtgdate" id="birtgdate" />
 
-            <div class="mb-3 row">
-                <label class="col-form-label col-sm-2" for="options">Delivery options:</label>
-                <div class="col-sm-10">
-                    <select class="form-select" id="options" name="options">
-                        <option selected>Pelease select an option...</option>
-                        <option value="1">Drop at door</option>
-                        <option value="2">meet at outside</option>
-                        <option value="3">pickup</option>
-                    </select>
+                <div>
+                    <label for="male">Male</label>
+                    <input type="radio" value="male" name="gender" id="male" />
+                    <label for="female">Female</label>
+                    <input type="radio" value="female" name="gender" id="female" />
+                    <label for="Other">Other</label>
+                    <input type="radio" value="Other" name="gender" id="Other" />
                 </div>
-            </div>
-            <div class="mb-3 row form-check">
-                <div class="offset-sm-2 col-sm-10">
-                    <input type="checkbox" class="form-check-input" id="remember">
-                    <label class="form-check-label" for="remember">Remember me</label> 
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <div class="offset-sm-2">
-                    <button type="reset" class="btn btn-primary">Reset</button> &nbsp;&nbsp; <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-        </form>
-    </div>
 
+                <label for="country">Country</label>
+                <input type="text" name="country" id="country" />
+
+                <div>
+                    <input type="radio" value="male" name="gender" id="male" />
+                    <label for="male">I'm accepting Terms and Condotions.</label>
+                </div>
+                <button type="submit">Sign Up</button>
+
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Anyway Inc. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
