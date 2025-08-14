@@ -14,30 +14,41 @@
         <h1>Sign Up</h1>
     </header>
     <main>
+        <!-- Sign up form -->
         <section id="contact" class="contact" aria-label="Contact heading">
             <form class="contact-form" aria-label="Contact form">
 
                 <li>Your basic info</li>
-
+                <!-- First name field -->
                 <label for="fname">First Name</label>
                 <input type="text" name="fname" id="fname" required />
+                <!-- Last name field -->
                 <label for="name">Last Name</label>
                 <input type="text" name="name" id="lname" required />
+                <!-- Email field -->
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" required />
+                <!-- Username field -->
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" required />
+                <!-- Password field -->
                 <label for="password">New Password</label>
-                <input type="password" name="psw" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="At least one number and one uppercase and lowercase letter and at least 8 or more characters" required />
+                <input type="password" name="psw" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="At least one number and one uppercase and lowercase letter and at least 8 or more characters"
+                    required />
+                <!-- Confirm Password field -->
                 <label for="confirmPsw">Confirm Password</label>
-                <input type="password" name="confirmPsw" id="confirmPsw"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="At least one number and one uppercase and lowercase letter and at least 8 or more characters" required />
+                <input type="password" name="confirmPsw" id="confirmPsw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="At least one number and one uppercase and lowercase letter and at least 8 or more characters"
+                    required />
 
                 <br>
                 <li>Other details</li>
-
+                <!-- Birth Date field -->
                 <label for="birtgdate">Birth Date</label>
                 <input type="date" name="birtgdate" id="birtgdate" />
 
+                <!-- Gender field -->
                 <label>Gender</label>
                 <div>
                     <input type="radio" value="male" name="gender" id="male" />
@@ -52,6 +63,7 @@
                     <label for="other">Other</label>
                 </div>
 
+                <!-- country field -->
                 <label for="country">Country</label>
                 <select name="country" id="country">
                     <option value="au">au</option>
@@ -59,25 +71,32 @@
                     <option value="eu">eu</option>
                 </select>
 
+                <!-- Profession field -->
                 <label for="Profession">Profession</label>
                 <select name="Profession" id="Profession">
                     <option value="Software">Software Development</option>
                     <option value="Data">Data Science</option>
                 </select>
 
+                <!-- about me field -->
                 <label for="about">About Me</label>
                 <textarea name="about" id="about"></textarea>
 
+                <!-- accepting Terms and Condotions -->
                 <div>
                     <br>
                     <input type="checkbox" value="terms" name="terms" id="terms" />
                     <label for="terms">I'm accepting Terms and Condotions.</label>
                 </div>
+
+                <!-- submit button -->
                 <button type="submit" value="signup">Sign Up</button>
 
             </form>
         </section>
     </main>
+
+    <!-- copyright section -->
     <footer>
         <p>&copy; 2025 Anyway Inc. All rights reserved.</p>
     </footer>
