@@ -1,0 +1,16 @@
+/* The * selector selects all elements, 
+the *:before selector selects all elements before the content, 
+and the *:after selector selects all elements after the content. */
+*, *:before, *:after {
+  /* global CSS reset */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* 100vw 100vh*/
+}
