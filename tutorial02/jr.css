@@ -1,0 +1,138 @@
+.logo {
+    width: 100px;
+    height: 15px;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-header-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    padding: 6px 15px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: #111;
+    margin: 8px;
+    transition: background-color 0.5s, color 0.5s, border 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #fff;
+    border: 1px solid #000;
+    background-color: #ff5757;
+}
+
+.nav-select {
+    padding: 6px 15px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: #111;
+    margin: 8px;
+    transition: background-color 0.5s, color 0.5s, border 0.5s ease-in-out;
+}
+
+.nav-search {
+    margin-right: 12px;
+}
+
+.hover-pointer:hover {
+    cursor: pointer;
+}
+
+.nav-signin {
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding: 6px 18px;
+    background-color: transparent;
+    margin-right: 12px;
+}
+.nav-signin:hover {
+    box-shadow: #000 2px 2px;
+    transform: translate(-2px, -2px);
+    transition: all 0.1s ease-in-out;
+}
+
+.nav-signup {
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding: 6px 18px;
+    background-color: #ff5757;
+    margin-right: 12px;
+}
+
+.nav-signup:hover {
+    box-shadow: #000 2px 2px;
+    transform: translate(-2px, -2px);
+    transition: all 0.1s ease-in-out;
+}
+
+/* banner */
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.banner-content-header {
+    color: rgb(255, 87, 87);
+    font-size: 36px;
+}
+
+.banner-content-subheader {
+    font-size: 28px;
+}
+
+.banner-content-description {
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 552px;
+}
+
+.banner-content-button {
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding: 6px 18px;
+    background-color: #ff5757;
+    margin-right: 12px;
+}
+.banner-content-button:hover {
+    box-shadow: #000 2px 2px;
+    transform: translate(-2px, -2px);
+    transition: all 0.1s ease-in-out;
+}
+
+.banner-img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+.member {
+    display: flex;
+    justify-content: start;
+    align-self: center;
+    flex-wrap: wrap;
+}
+
+.member-card {
+    width: 100px;
+}
