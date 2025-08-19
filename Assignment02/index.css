@@ -4,7 +4,7 @@ and the *:after selector selects all elements after the content. */
 *,
 *:before,
 *:after {
-    /* global CSS reset */
+    /* global CSS resez */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -76,23 +76,13 @@ main {
     position: relative;
 }
 
-.hero-image-1 {
+.hero-image.hero-image-1 {
     background-image: linear-gradient(#6546ff80, rgba(86, 255, 134, 0.5)),
         url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80");
 }
 
-.hero-image-2 {
+.hero-image.hero-image-2 {
     background-image: linear-gradient(#ffb24680, rgba(86, 255, 148, 0.5)),
-        url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80");
-}
-
-.hero-image-3 {
-    background-image: linear-gradient(#6546ff80, rgba(255, 244, 86, 0.5)),
-        url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80");
-}
-
-.hero-image-4 {
-    background-image: linear-gradient(#6546ff80, rgba(86, 255, 134, 0.5)),
         url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80");
 }
 
@@ -128,6 +118,7 @@ main {
 
 .card-button:hover {
     font-size: 15px;
+    background-color: rgba(0, 255, 255, 0.102);
 }
 
 .review-header {
@@ -153,34 +144,68 @@ main {
     margin: 0;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.reviewer-info .name.name-primary {
     color: #333;
 }
 
+.reviewer-info .name.name-secondary {
+    color: #ffffff;
+}
+
 .reviewer-info .role {
-    margin: 2px 0 0;
-    font-size: 0.7rem;
+    margin-top:0.5rem;
+    font-size: 0.8rem;
+}
+
+.reviewer-info .role.role-primary {
     color: #aaaaaa;
 }
 
-#company {
+.reviewer-info .role.role-secondary {
+    color: #ffffff;
+}
+
+.reviewer-info .company{
+    font-weight: bold;
+}
+
+.reviewer-info .company.company-primary {
     color: blueviolet;
+}
+
+.reviewer-info .company.company-secondary {
+    color: white;
 }
 
 .stars {
     align-self: flex-start;
     font-size: 1.1rem;
-    color: #f5a623;
     white-space: nowrap;
 }
+.stars.stars_primary {
+    color: #f5a623;
+}
+.stars.stars_secondary {
+    color: #ffffff;
+}
 
-.review-body p {
+.review-body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 25px;
     font-size: 1rem;
     line-height: 1.4;
+}
+
+.review-body.review-primary {
     color: #aaaaaa;
 }
 
-.hero-image-5 {
-    background-image: linear-gradient(#5e5cff80, rgba(189, 181, 255, 0.3));
+.review-body.review-secondary {
+    color: #f1f1f1;
+}
+
+.card.review-card.hero-image-3 {
+    background-image: linear-gradient(#0400fb80, rgba(58, 255, 98, 0.3));
 }
