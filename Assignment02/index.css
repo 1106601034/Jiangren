@@ -19,18 +19,17 @@ body {
 
 main {
     flex: 1;
-    padding: 10%;
 }
 
 .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    width: 100%;
+    padding: 10%;
+    grid-gap: 40px;
 }
 
 /* makes a one column layout instead of a two-column layout */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .cards {
         grid-template-columns: 1fr;
     }
@@ -39,11 +38,21 @@ main {
 .card {
     width: 400px;
     height: 250px;
-    background-color: white;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
+}
+
+.ad-card {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.review-card {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
 }
 
 .card:hover {
@@ -51,7 +60,6 @@ main {
 }
 
 .hero-image {
-    /* background-image: linear-gradient(#466eff80, rgba(255, 249, 86, 0.5)); */
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -80,28 +88,17 @@ main {
 }
 
 .hero-text {
-    /* text-align: left; */
-    /* position: absolute; */
-
     padding: 30px 25px;
-    /* top: 10%;
-    left: 5%; */
     color: white;
 }
 
-
-.card img {
-    width: 100%;
-    height: 200px;
-}
-
-.card h3 {
+.hero-text h3 {
     font-size: 2rem;
     color: #ffffff;
     font-weight: bold;
 }
 
-.card p {
+.hero-text p {
     line-height: 1.5rem;
     margin-top: 0.5rem;
     font-weight: lighter;
@@ -109,7 +106,7 @@ main {
     color: #ffffff;
 }
 
-.card button {
+.card-button {
     font-size: 12px;
     font-weight: bold;
     background: 0%;
@@ -122,4 +119,54 @@ main {
 
 .card button:hover {
     font-size: 15px;
+}
+
+
+
+.review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.reviewer-info {
+    flex: 1;
+}
+
+.reviewer-info .name {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.reviewer-info .role {
+    margin: 2px 0 0;
+    font-size: 0.7rem;
+}
+
+#company {
+    color: blueviolet;
+}
+
+.stars {
+    font-size: 1.1rem;
+    color: #f5a623;
+    white-space: nowrap;
+}
+
+.review-body p {
+    margin-top: 15px;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #767676;
 }
