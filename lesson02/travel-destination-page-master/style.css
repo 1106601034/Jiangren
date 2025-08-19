@@ -1,4 +1,8 @@
-*{
+/* The * selector selects all elements, 
+the *:before selector selects all elements before the content, 
+and the *:after selector selects all elements after the content. */
+*, *:before, *:after {
+  /* global CSS reset */
     box-sizing: border-box;
     margin:0;
     padding:0;
@@ -26,6 +30,12 @@ header {
     font-weight: bold;
     flex:1
 }
+
+/* nav {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+} */
 
 nav ul {
     display: flex;
@@ -102,13 +112,13 @@ footer .footer-links a:hover {
     color:#3b82f6;
 }
 
-
+/* Responsive layout - makes a 2 column layout instead of a 3 column layout */
 @media (max-width: 900px) {
     .cards {
         grid-template-columns: repeat(2,1fr);
     }
 }
-
+/* Responsive layout - makes a 1 column layout instead of a 3 column layout */
 @media (max-width: 600px) {
     .cards {
         grid-template-columns: 1fr;

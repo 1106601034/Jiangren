@@ -29,6 +29,13 @@ main {
     width: 100%;
 }
 
+/* makes a one column layout instead of a two-column layout */
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 .card {
     width: 400px;
     height: 250px;
@@ -44,6 +51,7 @@ main {
 }
 
 .hero-image {
+    /* background-image: linear-gradient(#466eff80, rgba(255, 249, 86, 0.5)); */
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -51,25 +59,31 @@ main {
     position: relative;
 }
 
-$hero-images: (
-    1: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80",
-    2: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
-    3: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
-    4: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
-);
+.hero-image-1 {
+    background-image: linear-gradient(#6546ff80, rgba(86, 255, 134, 0.5)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80");
+}
 
-@each $i, $url in $hero-images {
-    .hero-image-#{$i} {
-        background-image: linear-gradient(#466eff80, rgba(182, 255, 86, 0.5)),
-        url(#{$url}
-);
-    }
+.hero-image-2 {
+    background-image: linear-gradient(#ffb24680, rgba(86, 255, 148, 0.5)),
+        url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80");
+}
+
+.hero-image-3 {
+    background-image: linear-gradient(#6546ff80, rgba(255, 244, 86, 0.5)),
+        url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80");
+}
+
+.hero-image-4 {
+    background-image: linear-gradient(#6546ff80, rgba(86, 255, 134, 0.5)),
+        url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80");
 }
 
 .hero-text {
     /* text-align: left; */
     /* position: absolute; */
-    padding: 20px 10px;
+
+    padding: 30px 25px;
     /* top: 10%;
     left: 5%; */
     color: white;
@@ -82,15 +96,16 @@ $hero-images: (
 }
 
 .card h3 {
-    padding: 10px;
     font-size: 2rem;
     color: #ffffff;
     font-weight: bold;
 }
 
 .card p {
-    padding: 10px;
-    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 0.5rem;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
 }
 
@@ -100,23 +115,11 @@ $hero-images: (
     background: 0%;
     color: white;
     border-color: rgba(255, 255, 255, 0.5);
-    margin: 10px;
+    margin-top: 1.5rem;
     padding: 1rem 2rem;
     transition: font-size 0.3s;
 }
 
 .card button:hover {
     font-size: 15px;
-}
-
-@media (max-width: 900px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
 }
