@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(255, 246, 240);
+    background-color: rgb(237, 230, 227);
 }
 
 main {
@@ -45,23 +45,13 @@ main {
 }
 
 .card {
+    font-family: Arial, sans-serif;
     width: 400px;
     height: 250px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
-}
-
-.ad-card {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-}
-
-.review-card {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
 }
 
 .card:hover {
@@ -77,18 +67,17 @@ main {
 }
 
 .hero-image.hero-image-1 {
-    background-image: linear-gradient(#6546ff80, rgba(86, 255, 134, 0.5)),
+    background-image: linear-gradient(#3a1cce80, rgba(24, 211, 77, 0.5)),
         url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80");
 }
 
 .hero-image.hero-image-2 {
-    background-image: linear-gradient(#ffb24680, rgba(86, 255, 148, 0.5)),
+    background-image: linear-gradient(#d2831580, rgba(20, 218, 93, 0.5)),
         url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80");
 }
 
 .hero-text {
-    padding: 30px 25px;
-    color: white;
+    padding: 30px 25px 0px;
 }
 
 .hero-text h3 {
@@ -100,7 +89,8 @@ main {
 .hero-text p {
     line-height: 1.5rem;
     margin-top: 0.5rem;
-    font-weight: lighter;
+    font-weight: bold;
+    text-shadow: #000000;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
 }
@@ -108,17 +98,23 @@ main {
 .card-button {
     font-size: 12px;
     font-weight: bold;
-    background: 0%;
+    background-color: rgba(0, 255, 255, 0);
     color: white;
     border-color: rgba(255, 255, 255, 0.5);
-    margin-top: 1.5rem;
-    padding: 1rem 2rem;
-    transition: font-size 0.3s;
+    margin: 1.5rem 1.5rem;
+    padding: 0.8rem 1rem;
+    border-radius: 3px;
+    transition: background-color, font-size 0.3s;
 }
 
 .card-button:hover {
     font-size: 15px;
-    background-color: rgba(0, 255, 255, 0.102);
+    background-color: rgba(0, 255, 255, 0.3);
+}
+
+.card.review-card {
+    padding: 20px;
+    background-color: #ffffff;
 }
 
 .review-header {
@@ -155,7 +151,7 @@ main {
 }
 
 .reviewer-info .role {
-    margin-top:0.5rem;
+    margin-top: 0.5rem;
     font-size: 0.8rem;
 }
 
@@ -167,7 +163,7 @@ main {
     color: #ffffff;
 }
 
-.reviewer-info .company{
+.reviewer-info .company {
     font-weight: bold;
 }
 
@@ -184,9 +180,11 @@ main {
     font-size: 1.1rem;
     white-space: nowrap;
 }
+
 .stars.stars_primary {
     color: #f5a623;
 }
+
 .stars.stars_secondary {
     color: #ffffff;
 }
@@ -207,5 +205,5 @@ main {
 }
 
 .card.review-card.hero-image-3 {
-    background-image: linear-gradient(#0400fb80, rgba(58, 255, 98, 0.3));
+    background-image: linear-gradient(#5214d980, rgb(147, 16, 198));
 }
