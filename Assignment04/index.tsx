@@ -18,7 +18,10 @@ console.log(greeting);
 console.log();
 
 console.log('Q4');
-
+let person = {name: "eve", age: 25, city: "Sydney"};
+let {name:personName, age} = person;
+const getParams = ({name,age})=>{return `Name: ${name}, Age: ${age}`;}
+console.log(getParams(person))
 console.log();
 
 console.log('Q5');
