@@ -8,8 +8,8 @@ console.log(`The outer name is ${name}`);
 console.log();
 
 console.log('Q2');
-const DoAddition = (a,b)=>{return a+b;}
-console.log(DoAddition(25,21));
+const doAddition = (a,b)=>{return a+b;}
+console.log(doAddition(25,21));
 console.log();
 
 console.log('Q3');
@@ -25,9 +25,20 @@ console.log(getParams(person))
 console.log();
 
 console.log('Q5');
-
+const calculateArea = (width=4,height=5) => {return width*height}
+console.log(calculateArea());
 console.log();
 
 console.log('Q6');
+function sum(a,b) {
+    return a + b;
+}
+function doMath (...numbers) {
+    return numbers.reduce(sum,0);
+}
+console.log(doMath(1,2,3,6));
 
-console.log();
+let arr1 = [1,2];
+let arr2 = [3,4];
+let arr3 = [...arr1, ...arr2];
+console.log(arr3);
