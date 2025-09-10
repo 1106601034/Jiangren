@@ -3,15 +3,15 @@
 }
 
 :root {
-    --n: 1
+    --n:1;
 }
 
 body {
-    --h: 212deg;
-    --l: 43%;
-    --brandcolor: hsl(var(--h)), 71%, var(--l);
+    --h:212deg;
+    --l:43%;
+    --brandColor: hsl(var(--h), 71%, var(--l));
     font-family: sans-serif;
-    margin: 0;
+    margin:0;
     background-color: whitesmoke;
 }
 
@@ -27,15 +27,15 @@ ol {
 }
 
 li {
-    /* limit between li element and its child element */
-    --stop: calc(100% / var(--length)*var(--i));
-    --li: 62%;
-    --l2: 88%;
-    --h: calc((var(--i) - 1)*(180 / var(--length)));
-    --c1: hsl(var(--h), 71%, var(--l));
+    /* 作用域限制在li和其子元素中 */
+    --stop:calc(100% / var(--length) * var(--i));
+    --l:62%;
+    --l2:88%;
+    --h:calc((var(--i) - 1) * (180 / var(--length)));
+    --c1: hsl(var(--h), 71% , var(--l));
     --c2: hsl(var(--h), 71%, var(--l2));
 
-    position: relative;
+    position:relative;
     counter-increment: list;
     max-width: 45rem;
     margin: 2rem auto;
@@ -43,7 +43,8 @@ li {
     border-radius: 0.25rem;
     overflow: hidden;
     background-color: #fff;
-    box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3)
+    box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+
 }
 
 li::before {
@@ -52,18 +53,18 @@ li::before {
     width: 100%;
     height: 1rem;
     position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to right,
-            var(--c1)var(--stop),
-            var(--c2) var(--stop));
+    top:0;
+    left:0;
+    background: linear-gradient(to right, 
+    var(--c1) var(--stop), 
+    var(--c2) var(--stop));
 }
 
 h3 {
     display: flex;
     align-items: baseline;
     margin: 0 0 1rem;
-    color: rgb(70, 70, 70)
+    color: rgb(70, 70, 70);
 }
 
 h3::before {
@@ -76,23 +77,21 @@ h3::before {
     border-radius: 50%;
     padding: 1rem;
     background-color: var(--c1);
-    color: □#fff;
+    color: #fff;
     margin-right: 1rem;
     font-size: 1.5rem;
 }
 
-@media(min-width:40em) {
+@media (min-width: 40em) {
     li {
         margin: 3rem auto;
         padding: 3rem 2rem 2rem;
     }
-
     h3 {
         font-size: 2.25rem;
-        margin: 0 0 2rem;
+        margin:0 0 2rem;
     }
-
-    before::h3 {
+    h3::before {
         margin-right: 1.5rem;
     }
 }
