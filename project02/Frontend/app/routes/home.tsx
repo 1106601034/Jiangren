@@ -1,5 +1,7 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import CurrentWeatherSection from "~/components/CurrentWeatherSection/CurrentWeatherSection";
+import SocialMediaSection from "~/components/SocialMediaSection/SocialMediaSection";
+import ForecastCard from "~/components/ForecastCard/ForecastCard";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +11,15 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <div>
+      <div>
+        <CurrentWeatherSection />
+        <div>
+          <SocialMediaSection />
+          <ForecastCard />
+        </div>
+      </div>
+    </div>
+  );
 }
