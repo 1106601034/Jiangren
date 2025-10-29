@@ -1,7 +1,8 @@
 import type { Route } from "./+types/home";
 import CurrentWeatherSection from "~/components/CurrentWeatherSection/CurrentWeatherSection";
 import SocialMediaSection from "~/components/SocialMediaSection/SocialMediaSection";
-import ForecastCard from "~/components/ForecastCard/ForecastCard";
+import ForecastSection from "~/components/ForecastCard/ForecastCard";
+import "./home.css";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -12,12 +13,12 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div>
-      <div>
+    <div className="min-h-screen bg flex items-center justify-center">
+      <div className="bg-white text-black rounded-lg" style={{ minWidth: 800 }}>
         <CurrentWeatherSection />
-        <div>
+        <div className="flex">
           <SocialMediaSection />
-          <ForecastCard />
+          <ForecastSection />
         </div>
       </div>
     </div>

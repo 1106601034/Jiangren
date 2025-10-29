@@ -1,7 +1,10 @@
-import React from "react";
-
-const ForecastCard: FC<any> = () => {
-  return <div>ForecastCard</div>;
+const ForecastCard = () => {
+  return (
+    <div>
+      <h2>Weather Forecast</h2>
+      {/* Forecast information will be displayed here */}
+    </div>
+  );
 };
 
 export default ForecastCard;

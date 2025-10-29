@@ -1,4 +1,5 @@
 const BackBtn = () => {
-  return <button>Back</button>;
+  return <button onClick={() => window.history.back()}>Go Back</button>;
 };
+
 export default BackBtn;
