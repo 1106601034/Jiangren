@@ -1,7 +1,10 @@
-import React from "react";
-
 const TweetCard = () => {
-  return <div>TweetCard</div>;
+  return (
+    <div>
+      <h2>Tweet Title</h2>
+      <p>Tweet content goes here...</p>
+    </div>
+  );
 };
 
 export default TweetCard;

@@ -1,7 +1,7 @@
 import type { Route } from "./+types/home";
 import CurrentWeatherSection from "~/components/CurrentWeatherSection/CurrentWeatherSection";
 import SocialMediaSection from "~/components/SocialMediaSection/SocialMediaSection";
-import ForecastSection from "~/components/ForecastCard/ForecastCard";
+import ForecastSection from "~/components/ForecastSection/ForecastSection";
 import "./home.css";
 
 export function meta({}: Route.MetaArgs) {

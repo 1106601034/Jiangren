@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./CurrentWeatherSection.css";
 import generateWeatherImage from "~/api/openAi";
-import "./CurrentWeatherSection.css";
 
 const CurrentWeatherSection = () => {
   const [imageUrl, setImageUrl] = useState<string>("");
